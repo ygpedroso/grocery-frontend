@@ -26,12 +26,10 @@
         "unfetch": "^3.1.1"
     },
     "scripts": {
-        "start": "react-scripts start",
+        "start:dev": "react-scripts start",
         "build": "react-scripts build",
         "test": "jest --env=jsdom --config=jest.config.json --testPathPattern src/",
-        "test:ci": "jest --env=jsdom --config=jest.config.json --ci --no-cache --testPathPattern src/",
-        "test:coverage": "jest --env=jsdom --config=jest.config.json --testPathPattern src/ --coverage",
-        "eject": "react-scripts eject"
+        "test:coverage": "jest --env=jsdom --config=jest.config.json --testPathPattern src/ --coverage"
     },
     "devDependencies": {
         "babel-eslint": "^8.2.3",
