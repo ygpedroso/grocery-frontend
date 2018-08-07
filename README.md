@@ -1,4 +1,5 @@
 # Contribution Guide:
+[![framework: react](https://img.shields.io/badge/framework-react-ff69b4.svg)](https://reactjs.org/) [![framework: redux](https://img.shields.io/badge/framework-redux-551a8b.svg)](https://redux.js.org/) [![language: javascript](https://img.shields.io/badge/language-javascript-blue.svg)](https://www.javascript.com/) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![code linting: jest](https://img.shields.io/badge/lint-eslint-blue.svg)](https://github.com/eslint/eslint)  [![code quality: jest](https://img.shields.io/badge/test-jest-ff69b4.svg)](https://facebook.github.io/jest/) 
 
 ## Prerequisites
 1. `node`, `npm`
