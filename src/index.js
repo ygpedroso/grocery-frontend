@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.css';
 import { Provider } from 'react-redux';
 import Store from './redux/store';
 import Router from './router';
