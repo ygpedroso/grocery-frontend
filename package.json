@@ -29,7 +29,8 @@
         "start:dev": "react-scripts start",
         "build": "react-scripts build",
         "test": "jest --env=jsdom --config=jest.config.json --testPathPattern src/",
-        "test:coverage": "jest --env=jsdom --config=jest.config.json --testPathPattern src/ --coverage"
+        "test:coverage": "jest --env=jsdom --config=jest.config.json --testPathPattern src/ --coverage",
+        "serve": "npm i -g http-server && npm run build && http-server dist/"
     },
     "devDependencies": {
         "babel-eslint": "^8.2.3",
