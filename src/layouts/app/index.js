@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Grid, Row, Col } from 'react-bootstrap';
 import ProductComponent from './../../components/product';
 import './App.css';
@@ -27,9 +29,9 @@ class App extends Component {
                         </Row>
                     </Grid>
                     <ul className="products-list">
-                        <ProductComponent name="Buy Milk" />
-                        <ProductComponent name="Buy eggs" />
-                        <ProductComponent name="Pick up soda" />
+                        {this.props.products.map(product => (
+                            <ProductComponent name={product.name} key={product.id} />
+                        ))}
                     </ul>
                 </div>
             </div>
@@ -37,4 +39,14 @@ class App extends Component {
     }
 }
 
-export default App;
+App.propTypes = {
+    products: PropTypes.any.isRequired,
+};
+
+function mapStateToProps(state) {
+    return {
+        products: state.products.products,
+    };
+}
+
+export default connect(mapStateToProps)(App);
