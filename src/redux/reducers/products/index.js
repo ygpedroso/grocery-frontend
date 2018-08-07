@@ -9,8 +9,9 @@ export default function productsReducer(state = INITIAL_STATE, action = {}) {
         case ProductTypes.GET_PRODUCTS:
             return { ...state, products: action.products };
         case ProductTypes.CREATE_PRODUCT:
-            state.products.push(action.product);
-            return { ...state };
+            const newProducts = Object.assign([], state.products);
+            newProducts.push(action.product);
+            return { ...state, products: newProducts };
         case ProductTypes.REMOVE_PRODUCT:
             const filteredProducts = state.products.filter(
                 product => product.id !== action.productId
