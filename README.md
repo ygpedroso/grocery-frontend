@@ -9,6 +9,10 @@
 3. Install dependencies `npm i` or `yarn`
 4. Run the application in development mode `npm run start:dev`
 
+## Tests
+1. Run application Tests `npm run test`
+1. Run application Tests + coverage `npm run test:coverage`
+
 ## Grocery List frontend application url:
 1. Base Url: [https://rideco-grocery-frontend.herokuapp.com/](https://rideco-grocery-frontend.herokuapp.com/)
 
