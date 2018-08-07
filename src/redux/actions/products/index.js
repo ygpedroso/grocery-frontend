@@ -7,19 +7,19 @@ import {
 } from './../../../api/apollo/product/mutations';
 
 export const getProductsAction = () => dispatch => {
-    getProducts().then(data => {
+    getProducts().then(response => {
         dispatch({
             type: ProductTypes.GET_PRODUCTS,
-            products: data.products,
+            products: response.data.products,
         });
     });
 };
 
 export const createProductAction = name => dispatch => {
-    createProduct(name).then(data => {
+    createProduct(name).then(response => {
         dispatch({
             type: ProductTypes.CREATE_PRODUCT,
-            product: data.createProduct.product,
+            product: response.data.createProduct.product,
         });
     });
 };
@@ -34,10 +34,10 @@ export const removeProductAction = productId => dispatch => {
 };
 
 export const updateProductAction = (productId, name) => dispatch => {
-    updateProduct(productId, name).then(data => {
+    updateProduct(productId, name).then(response => {
         dispatch({
             type: ProductTypes.UPDATE_PRODUCT,
-            product: data.updateProduct.product,
+            product: response.data.updateProduct.product,
         });
     });
 };
