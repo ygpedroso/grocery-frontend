@@ -30,7 +30,7 @@
         "build": "react-scripts build",
         "test": "jest --env=jsdom --config=jest.config.json --testPathPattern src/",
         "test:coverage": "jest --env=jsdom --config=jest.config.json --testPathPattern src/ --coverage",
-        "serve": "npm i -g http-server && npm run build && http-server dist/"
+        "serve": "NODE_ENV=production npm i -g http-server && npm run build && http-server build/"
     },
     "devDependencies": {
         "babel-eslint": "^8.2.3",
