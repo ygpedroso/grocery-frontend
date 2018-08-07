@@ -2,10 +2,11 @@ import gql from 'graphql-tag';
 import client from '../client';
 
 export function createProduct(name) {
-    return client.query({
+    return client.mutate({
+        variables: { name },
         mutation: gql`
-            {
-                createProduct(name: ${name}) {
+            mutation CreateProduct($name: String!) {
+                createProduct(name: $name) {
                     product {
                         id
                         name
@@ -18,11 +19,12 @@ export function createProduct(name) {
     });
 }
 
-export function removeProduct(id) {
-    return client.query({
+export function removeProduct(productId) {
+    return client.mutate({
+        variables: { productId },
         mutation: gql`
-            {
-                removeProduct(productId: ${id}) {
+            mutation RemoveProduct($productId: ID!) {
+                removeProduct(productId: $productId) {
                     product {
                         id
                         name
@@ -35,11 +37,12 @@ export function removeProduct(id) {
     });
 }
 
-export function updateProduct(id, name) {
-    return client.query({
+export function updateProduct(productId, name) {
+    return client.mutate({
+        variables: { productId, name },
         mutation: gql`
-            {
-                updateProduct(productId: ${id}, name: ${name}) {
+            mutation UpdateProduct($productId: ID!, $name: String!) {
+                updateProduct(productId: $productId, name: $name) {
                     product {
                         id
                         name
