@@ -1,31 +1,45 @@
 import ProductTypes from './types';
+import { getProducts } from './../../../api/apollo/product/queries';
+import {
+    createProduct,
+    removeProduct,
+    updateProduct,
+} from './../../../api/apollo/product/mutations';
 
 export default class {
     static getProducts = () => dispatch => {
-        dispatch({
-            type: ProductTypes.GET_PRODUCTS,
+        getProducts().then(data => {
+            dispatch({
+                type: ProductTypes.GET_PRODUCTS,
+                products: data.products,
+            });
         });
     };
 
     static createProduct = name => dispatch => {
-        dispatch({
-            type: ProductTypes.CREATE_PRODUCT,
-            name,
+        createProduct(name).then(data => {
+            dispatch({
+                type: ProductTypes.CREATE_PRODUCT,
+                product: data.createProduct.product,
+            });
         });
     };
 
     static removeProduct = productId => dispatch => {
-        dispatch({
-            type: ProductTypes.REMOVE_PRODUCT,
-            productId,
+        removeProduct(productId).then(() => {
+            dispatch({
+                type: ProductTypes.REMOVE_PRODUCT,
+                productId,
+            });
         });
     };
 
     static updateProduct = (productId, name) => dispatch => {
-        dispatch({
-            type: ProductTypes.UPDATE_PRODUCT,
-            productId,
-            name,
+        updateProduct(productId, name).then(data => {
+            dispatch({
+                type: ProductTypes.UPDATE_PRODUCT,
+                product: data.updateProduct.product,
+            });
         });
     };
 }
