@@ -1,3 +1,55 @@
-.App {
-
+.App{
+    height: 100%;
+    padding: 10px;
+    background: #0d1521;
+    font-family: sans-serif;
+    color: #989898;
 }
+
+.products-list-header {
+    text-align: center;
+}
+
+.products-list-container {
+    background: #090d13;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.products-list-form {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.products-list {
+    margin-top: 10px;
+}
+
+input[type="text"]{
+    width: 100%;
+    padding: 20px;
+    background:#181c22;
+    border: 0;
+    font-size: 20px;
+    color: #989898;
+}
+
+button{
+    padding: 20px;
+    width: 100%;
+    background: #23282e;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
