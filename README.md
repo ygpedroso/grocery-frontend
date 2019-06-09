@@ -18,5 +18,5 @@
 1. Run application Tests + coverage `npm run test:coverage`
 
 ## Grocery List frontend application url:
-1. Base Url: [https://rideco-grocery-frontend.herokuapp.com/](https://rideco-grocery-frontend.herokuapp.com/)
+1. Base Url: [https://grocery-frontend.herokuapp.com/](https://grocery-frontend.herokuapp.com/)
 
