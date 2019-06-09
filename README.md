@@ -4,6 +4,9 @@
 ## Prerequisites
 1. `node`, `npm`
 
+## Environment variables
+1. REACT_APP_API_URL: Backend Api Url(i.e:`http://localhost:8000/api/`).
+
 ## Steps for running solution locally
 1. Clone the repository `git clone git@github.com:ygpedroso/rideco-grocery-frontend.git`
 2. Enter to the project folder `cd rideco-grocery-frontend/`

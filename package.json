@@ -1,14 +1,14 @@
 {
-    "name": "rideco-grocery-frontend",
+    "name": "grocery-frontend",
     "version": "1.0.0",
     "private": true,
     "keywords": [
-        "RideCo",
+        "react",
         "grocery"
     ],
     "dependencies": {
         "apollo-boost": "^0.1.12",
-        "bootstrap": "3.3.6",
+        "bootstrap": "3.4.1",
         "graphql": "^0.13.2",
         "graphql-tag": "^2.9.2",
         "prop-types": "^15.6.1",

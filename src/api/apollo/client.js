@@ -1,11 +1,7 @@
 import ApolloClient from 'apollo-boost';
 import fetch from 'unfetch';
 
-let graphqlEndpoint = 'http://localhost:8000/api/';
-
-if (process.env.NODE_ENV === 'production') {
-    graphqlEndpoint = 'https://rideco-grocery.herokuapp.com/api/';
-}
+let graphqlEndpoint = process.env.REACT_APP_API_URL;
 
 const client = new ApolloClient({
     uri: graphqlEndpoint,
